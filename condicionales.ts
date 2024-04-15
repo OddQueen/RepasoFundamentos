@@ -98,11 +98,11 @@ function continent(country: string): void {
 continent(country)
 console.log(`${country} se encuentra en ${continente}`);
     
-export function isEven(number: number): void {
+export function isEven(number: number): any {
     let numero = number % 2 === 0 ? "El número es par" : "El número es impar";
     console.log(numero);
 
 }
 
-isEven(1392);
+console.log(isEven(132));
 

@@ -32,15 +32,18 @@ function isRainbow(colors: string[]): any {
 
         for (let i=0; i < colors.length; i++)
         {
-          if (colors[i] == "rojo" || colors[i] == "naranja" ) {
-            
-          }  
-        }}
+            if (colors[i] === "rojo" || colors[i] === "naranja" || colors[i] === "amarillo" || colors[i] === "verde" || colors[i] === "cian" || colors[i] === "azul" || colors[i] === "violeta") {
+            return true;
+          }   else {
+            return false;
+          }
+        }
+    }
 
 isRainbow(["verde", "naranja", "amarillo", "negro", "cian", "morado", "violeta"]);
 
 
-function add(myWords: string[]): number {
+export function add(myWords: string[]): number {
     let sum: number = 0;
     for (let myWord of myWords) {
         sum += myWord.length;
