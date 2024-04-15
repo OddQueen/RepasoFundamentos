@@ -69,7 +69,7 @@ console.log("Esta persona es" + " "+ signo);
 //Si no se cumple ningún Case, se imprime el default. 
 
 let continente: string = "";
-let country: string = "";
+let country: string = "Australia";
 function continent(country: string): void {
 
     switch (true) {
@@ -95,7 +95,7 @@ function continent(country: string): void {
 
 }
 
-continent("Australia")
+continent(country)
 console.log(`${country} se encuentra en ${continente}`);
     
 export function isEven(number: number): void {
