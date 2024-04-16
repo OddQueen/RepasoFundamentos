@@ -33,4 +33,17 @@ export class Point
     {
         return "Point: " + this.x + " " + this.y;
     }
+
+    distanceToOrigin(x1: number, y1: number): number 
+    {
+       return Math.floor(Math.hypot(x1- this.x , y1 - this.y));
+    }
+
+    calculateDistance(anotherPoint: Point): number 
+    {
+        let X2 = anotherPoint.x - this.x;
+        let Y2 = anotherPoint.y - this.y;
+        return Math.floor(Math.sqrt(X2 ** 2 + Y2 ** 2));
+    }
+
 }
