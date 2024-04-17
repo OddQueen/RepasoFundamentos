@@ -26,3 +26,18 @@ let cuadrante1 = new Point(9, -3);
 
 console.log(cuadrante.calcularQuadrant());
 console.log(cuadrante1.calcularQuadrant());
+
+console.log("Punto más cercano");
+let puntoInicial = new Point(3, 5);
+console.log(puntoInicial);
+
+let arrayPoints: Point[] = 
+[  
+    new Point(5, 4),
+    new Point(-5, 4)
+];
+console.log(arrayPoints);
+
+let nearest = puntoInicial.calculateNearest(arrayPoints);
+console.log(nearest);
+

@@ -47,7 +47,8 @@ export class Point
     }
 
     calcularQuadrant(): number 
-    {  if (this.x === 0 || this.y === 0) {
+    {  
+        if (this.x === 0 || this.y === 0) {
             return 0;
         } else if (this.x > 0 && this.y > 0) {
             return 1;
@@ -62,5 +63,18 @@ export class Point
         }
     }
 
+    calculateNearest(points : Point[]) : Point
+     {        
+        let nearest = points[0];
+        for (let i = 0; i < points.length; i++) {
+            let distanciaInicial = this.calculateDistance(points[i]);
+            let distanciaAPunto = this.calculateDistance(nearest);
 
-}
+            if (distanciaInicial < distanciaAPunto) {
+                nearest = points[i];
+            }
+        }
+        return nearest;
+    }
+    }
+
