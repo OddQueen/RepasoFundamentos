@@ -46,4 +46,21 @@ export class Point
         return Math.floor(Math.sqrt(X2 ** 2 + Y2 ** 2));
     }
 
+    calcularQuadrant(): number 
+    {  if (this.x === 0 || this.y === 0) {
+            return 0;
+        } else if (this.x > 0 && this.y > 0) {
+            return 1;
+        } else if (this.x < 0 && this.y > 0) {
+            return 2;
+        } else if (this.x < 0 && this.y < 0) {
+            return 3;
+        } else if ( this.x > 0 && this.y < 0){
+            return 4;
+        }else {
+            return 89
+        }
+    }
+
+
 }
